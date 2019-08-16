@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+          "type": "node",
+          "request": "launch",
+          "name": "启动程序",
+          "program": "${workspaceRoot}/bin/www",
+          "sourceMaps": true
+         // "preLaunchTask": "dev" // 等于下面`label`值
+        }
+    ]
+}
