@@ -1,0 +1,12 @@
+[{
+  "next": "b.json",
+  "msg": "This is a!"
+},
+{
+  "next": "c.json",
+  "msg": "This is b!"
+},
+{
+  "next": null,
+  "msg": "This is c!"
+}]
