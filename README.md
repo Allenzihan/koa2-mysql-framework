@@ -16,7 +16,7 @@
 ├── .babelrc                    # Babel 配置文件
 ├── .gitignore                  # Git 忽略文件列表
 ├── package.json                # 描述文件
-├── pm2.js                      # pm2 部署示例文件
+├── process.config.js           # pm2 部署示例文件
 ├── bin                         # bin入口目录
 │   └── www                     # 启动文件入口
 ├── .vscode                     # VS CODE 调式目录
@@ -33,9 +33,12 @@
 │       └── errorRouteCatch.js  # 示例插件 -  router异常处理
 │   ├── utils                   # 工具类目录
 │   ├── controllers             # 控制器
+│       └── usersController.js  # 示例users控制器
 │   ├── models                  # 模型层
 │   ├── routes                  # 路由层
+│         └── users.js          # 示例users路由
 │   └── services                # 服务层
+│         └── usersService.js   # 示例users服务层
 ├── public                      # 静态资源目录
 └── logs                        # 日志目录
 ```
