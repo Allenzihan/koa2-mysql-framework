@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node bin/www --dev",
-    "dev": "./node_modules/.bin/nodemon bin/www --dev",
-    "uat": "node bin/www --uat",
-    "prd": "pm2 start bin/www --prod",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node bin/www",
+    "dev": "./node_modules/.bin/nodemon bin/www",
+    "uat": "pm2 start process.config.js --only uat",
+    "prod": "pm2 start process.config.js --only prod"
   },
   "dependencies": {
     "babel-preset-env": "^1.7.0",

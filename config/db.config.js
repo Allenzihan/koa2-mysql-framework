@@ -13,7 +13,7 @@ module.exports = {
     database: 'testdb',
     connectionLimit: 20
   },
-  pord: {
+  prod: {
     host: 'localhost',
     user: 'allen',
     password: '123456',

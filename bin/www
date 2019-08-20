@@ -2,13 +2,13 @@
 require('babel-register') ({
   presets: [ 'env' ]
 })
-process.env.NODE_ENV = process.argv[2] ? process.argv[2].slice(2) : 'dev'
-
+let env = process.argv[2] ? process.argv[2].slice(2) : 'dev'
+process.env.NODE_ENV = process.env.NODE_ENV ?  process.env.NODE_ENV : env
 /**
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('../src/app');
 var debug = require('debug')('demo:server');
 var http = require('http');
 
@@ -91,5 +91,7 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
-  console.log('Please visit the address: http://localhost:' + port)
+  if(process.env.NODE_ENV === 'dev'){
+    console.log('Please visit the address: http://localhost:' + port)
+  }
 }
