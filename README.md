@@ -85,8 +85,15 @@ PM2 配合 Docker 部署说明： http://pm2.keymetrics.io/docs/usage/docker-pm2
 
 ### 关于 Token 使用的特别说明（JWT 身份认证）
 
-`src\app.js`目录中有一行代码：
-`.use(jwt({ secret: publicKey }).unless({ path: [/^\/public|\/user\/login|\/assets/] }))`
+app.use(jwt({ 
+  secret: publicKey.toString()
+}).unless({
+  path: [
+    /^\/users\/login/,
+    /^\/home/,
+    /^\/assets/
+  ] 
+}))
 
 在 path 里面的开头路径则不进行身份认证，否则都将进行  鉴权。
 

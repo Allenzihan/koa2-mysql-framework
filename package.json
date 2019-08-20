@@ -5,8 +5,8 @@
   "scripts": {
     "start": "node bin/www",
     "dev": "./node_modules/.bin/nodemon bin/www",
-    "uat": "pm2 start process.config.js --only uat",
-    "prod": "pm2 start process.config.js --only prod"
+    "uat": "pm2 start ./process.config.js --only uat",
+    "prod": "pm2 start ./process.config.js --only prod"
   },
   "dependencies": {
     "babel-preset-env": "^1.7.0",
