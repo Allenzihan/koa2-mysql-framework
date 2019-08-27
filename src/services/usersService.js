@@ -1,10 +1,10 @@
 import sqlHelper from '../utils/sqlHelper.js'
 
-class usersService {
+class usersService extends sqlHelper {
     
-   static async getUserInfoByUserId (username) {
-        return await sqlHelper.execute('SELECT * FROM users where username = ?', username)
+    async getUserInfoByUserId (username) {
+        return await this.query('SELECT * FROM users where username = ?', username)
     }
 }
 
-export default usersService
+export default new usersService()
